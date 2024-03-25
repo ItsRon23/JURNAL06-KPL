@@ -9,7 +9,7 @@ public class SayaTubeUser
 
     public SayaTubeUser(string username)
     {
-        // Contract.Requires(username != null && username.Length <= 100);
+        Contract.Requires(username != null && username.Length <= 100);
 
         this.id = new Random().Next(10000, 99999);
         this.Username = username;
@@ -28,7 +28,7 @@ public class SayaTubeUser
 
     public void addVideo( SayaTubeVideo video)
     {
-        // Debug.Assert(video != null);
+        Debug.Assert(video != null);
         // Debug.Assert(video.getPlayCount() > 0 && video.getPlayCount() < int.MaxValue);
         uploadedVideos.Add(video);
     }
